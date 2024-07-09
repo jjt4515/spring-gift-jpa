@@ -53,12 +53,5 @@ public class TokenService {
         return Keys.hmacShaKeyFor(secretKey.getBytes(StandardCharsets.UTF_8));
     }
 
-    public boolean validateToken(String token) {
-        try {
-            parseToken(token);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+
 }
