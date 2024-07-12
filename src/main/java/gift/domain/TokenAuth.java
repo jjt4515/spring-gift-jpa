@@ -11,12 +11,12 @@ public class TokenAuth {
     @Column(nullable = false, length = 255)
     private String token;
 
-    @Column(nullable = false, length = 255)
-    private String email;
+    @Column(nullable = false)
+    private Long memberId;
 
-    public TokenAuth(String token, String email){
+    public TokenAuth(String token, Long memberId){
         this.token = token;
-        this.email = email;
+        this.memberId = memberId;
     }
 
     public TokenAuth() {
@@ -27,8 +27,8 @@ public class TokenAuth {
         return token;
     }
 
-    public String getEmail(){
-        return email;
+    public Long getMemberId(){
+        return memberId;
     }
 
 }

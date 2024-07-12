@@ -40,7 +40,7 @@ public class TokenServiceTest {
         Member member = new Member(EMAIL, "password");
         member.setId(MEMBER_ID);
 
-        TokenAuth tokenAuth = new TokenAuth(TOKEN, EMAIL);
+        TokenAuth tokenAuth = new TokenAuth(TOKEN, MEMBER_ID);
         when(tokenRepository.save(any(TokenAuth.class))).thenReturn(tokenAuth);
         when(tokenRepository.findByToken(TOKEN)).thenReturn(Optional.of(tokenAuth));
     }
@@ -61,7 +61,7 @@ public class TokenServiceTest {
         TokenAuth tokenAuth = tokenService.findToken(TOKEN);
 
         assertNotNull(tokenAuth);
-        assertEquals(EMAIL, tokenAuth.getEmail());
+        assertEquals(MEMBER_ID, tokenAuth.getMemberId());
     }
 
     @Test
