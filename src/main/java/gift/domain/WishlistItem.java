@@ -16,11 +16,6 @@ public class WishlistItem {
     @Column(name = "product_id", nullable = false)
     private Long productId;
 
-    public WishlistItem(Long id, Long memberId, Long productId) {
-        this.id = id;
-        this.memberId = memberId;
-        this.productId = productId;
-    }
 
     public WishlistItem(Long memberId, Long productId) {
         this.memberId = memberId;
@@ -31,27 +26,9 @@ public class WishlistItem {
 
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getMemberId() {
-        return memberId;
-    }
-
-    public void setMemberId(Long memberId) {
-        this.memberId = memberId;
-    }
-
     public Long getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
+
 }

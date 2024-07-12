@@ -3,7 +3,6 @@ package gift.service;
 import gift.dto.request.WishlistNameRequest;
 import gift.domain.WishlistItem;
 import gift.exception.MemberNotFoundException;
-import gift.repository.wishlist.WishlistRepository;
 import gift.repository.wishlist.WishlistSpringDataJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

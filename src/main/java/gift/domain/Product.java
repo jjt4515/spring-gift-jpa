@@ -22,13 +22,6 @@ public class Product {
 
     public Product(){}
 
-    public Product(long id, String name, Integer price, String imageUrl) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.imageUrl = imageUrl;
-    }
-
 
     public Product(String name, Integer price, String imageUrl) {
         this.name = name;
@@ -38,9 +31,6 @@ public class Product {
 
     public long getId(){
         return id;
-    }
-    public void setId(long id){
-        this.id = id;
     }
     public String getName(){
         return name;

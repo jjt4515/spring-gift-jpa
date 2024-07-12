@@ -2,7 +2,7 @@ package gift.domain;
 
 import jakarta.persistence.*;
 @Entity
-@Table(name = "tokenauth")
+@Table(name = "token_auth")
 public class TokenAuth {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
